@@ -1,7 +1,6 @@
 repeat task.wait() until game:IsLoaded()
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
-local GUIVisible = true
 
 local Library = {}
 
@@ -76,3 +75,5 @@ function Library.CreateToggleButton(section, offText, onText, hotkey)
     -- Return toggle state if needed externally
     return toggleState
 end
+
+return Library
