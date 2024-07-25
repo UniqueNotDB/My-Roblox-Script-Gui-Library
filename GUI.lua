@@ -3,8 +3,10 @@ local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 local GUIVisible = true
 
--- GUI Funcs
-local function CreateSection(text, pos, color)
+local Library = {}
+
+-- Define CreateSection function
+function Library.CreateSection(text, pos, color)
     local section = Instance.new("Frame")
     section.Size = UDim2.new(0, 200, 0, 50)
     section.Position = pos
@@ -32,7 +34,8 @@ local function CreateSection(text, pos, color)
     return section, layout  -- Return the section object and layout if needed
 end
 
-local function CreateToggleButton(section, offText, onText, hotkey)
+-- Define CreateToggleButton function
+function Library.CreateToggleButton(section, offText, onText, hotkey)
     local toggleButton = Instance.new("TextButton")
     toggleButton.Text = offText
     toggleButton.Size = UDim2.new(1, -2, 0, 30)
